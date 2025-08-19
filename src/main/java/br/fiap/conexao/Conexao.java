@@ -5,12 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
-    private String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl";
-    private String USER = "rm558179";
-    private String PASSWORD = "fiap25";
-    private Connection conexao;
+    private static String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl";
+    private static String USER = "rm558179";
+    private static String PASSWORD = "fiap25";
+    private static Connection conexao;
 
-    public Connection conectar(){
+    public static Connection conectar(){
 
         try {
             conexao = DriverManager.getConnection(URL, USER, PASSWORD);
